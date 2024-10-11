@@ -90,8 +90,42 @@ button:active {
 }
 
 dialog {
+  padding: 2rem;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  background-color: var(--secondary-container);
+  color: var(--secondary-color);
+}
+h2 {
+  font-family: "Aclonica", serif;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+#addBookForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#addBookForm label {
+  font-weight: bolder;
+}
+input[type="text"],
+input[type="number"] {
+  height: 2rem;
+  border-radius: 0.5rem;
+  padding: 5px;
+  background-color: var(--tertiary-container);
+  color: var(--tertiary-color);
+  font-weight: bold;
+}
+
+.btnsContainer{
+  display: flex;
+  gap:1rem;
+}
+.btnsContainer button{
+  width: fit-content;
 }

@@ -69,11 +69,21 @@ function displayBooks() {
 
     //Add buttons
     const btnsDiv = document.createElement("div");
+    btnsDiv.classList.add("btnsContainer")
     const isReadBtn = document.createElement("button");
     const deleteBtn = document.createElement("button");
 
-    isReadBtn.textContent = "isRd?";
-    deleteBtn.textContent = "dete";
+    const iconDelete = document.createElement("img")
+    iconDelete.src = "./imgs/icon_delete.svg"
+    iconDelete.alt = "delete"
+
+    const iconComplete = document.createElement("img")
+    iconComplete.src = "./imgs/icon_completed.svg"
+    iconComplete.alt = "complete"
+
+    isReadBtn.prepend(iconComplete)
+    deleteBtn.prepend(iconDelete)
+
 
     const actionsDiv = document.createElement("div");
     // actionsDiv.textContent = "delete - isRead"
@@ -93,3 +103,6 @@ function displayBooks() {
 console.log(myLibrary)
 // Mostrar los libros iniciales (si hubiera alguno)
 displayBooks();
+
+const newBookT = new Book("title", "author", 11, false);
+addBookToLibrary(newBookT);
